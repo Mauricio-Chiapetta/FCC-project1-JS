@@ -8,39 +8,41 @@ let inventory = ["stick"];
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
-const button3 =  document.querySelector("#button3");
+const button3 = document.querySelector("#button3");
 
-const xpText =  document.querySelector('#xpText')
-const healthText =  document.querySelector('#healthText')
-const goldText =  document.querySelector('#goldText')
-const monsterName =  document.querySelector('#monsterName')
-const monsterStats =  document.querySelector('#monsterStats')
+const xpText = document.querySelector('#xpText')
+const healthText = document.querySelector('#healthText')
+const goldText = document.querySelector('#goldText')
+const monsterName = document.querySelector('#monsterName')
+const monsterStats = document.querySelector('#monsterStats')
 const text = document.querySelector('#text')
 
-const monsterHealthText =  document.querySelector('#monsterHealth')
+const monsterHealthText = document.querySelector('#monsterHealth')
+
+const locations = [{}]
 
 // initialize buttons
 button1.onclick = goStore;
 button2.onclick = goCave;
 button3.onclick = fightDragon;
 
-function goTown(){
+function goTown() {
 
- button1.innerText ="Go to store";
+    button1.innerText = "Go to store";
     button2.innerText = "Go to cave";
-    button3.innerText =  "Fight dragon";
+    button3.innerText = "Fight dragon";
 
     button1.onclick = goStore;
     button2.onclick = goCave;
     button3.onclick = fightDragon;
 
-    text.innerText = "You are in the town square. You see a sign that says Store."
+    text.innerText = "You are in the town square. You see a sign that says \"Store\"."
 }
-function goStore()
-{
-    button1.innerText ="Buy 10 health (10 gold)";
+
+function goStore() {
+    button1.innerText = "Buy 10 health (10 gold)";
     button2.innerText = "Buy weapon (30 gold)";
-    button3.innerText =  "Go to town square";
+    button3.innerText = "Go to town square";
 
     button1.onclick = buyHealth;
     button2.onclick = buyWeapon;
@@ -49,22 +51,25 @@ function goStore()
     text.innerText = "You enter the store."
 }
 
-function buyHealth(){
+function update(location){
 
 }
 
-function buyWeapon(){
+function buyHealth() {
+
+}
+
+function buyWeapon() {
 
 }
 
 
 
-function goCave()
-{
+function goCave() {
     console.log("Going to cave.");
 
 }
 
-function fightDragon(){
+function fightDragon() {
     console.log("Fighting dragon.")
 }
