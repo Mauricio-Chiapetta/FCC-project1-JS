@@ -40,7 +40,7 @@ button2.onclick = goCave;
 button3.onclick = fightDragon;
 
 function update(location){
-    button1.innerText = "Go to store";
+    button1.innerText = locations["button text"];// a ultima linha foi aqui
     button2.innerText = "Go to cave";
     button3.innerText = "Fight dragon";
 
