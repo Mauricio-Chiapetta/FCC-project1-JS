@@ -87,8 +87,11 @@ function buyHealth() {
     
     
 }
-
+//parei aqui
 function buyWeapon() {
+    gold-=30
+
+    goldText.innerText=gold
 
 }
 
