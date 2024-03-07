@@ -1,6 +1,6 @@
 let xp = 0;
 let health = 100;
-let gold = 50;
+let gold =50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
@@ -117,28 +117,35 @@ function goCave() {
         
     }
 
-//parei aqui
+  
+
 function buyWeapon() {
 
     
-    if(gold>=30){
-        gold-=30
-        goldText.innerText = gold
-        currentWeapon++
-
-        let newWeapon = weapons[currentWeapon].name
-
-        goldText.innerText= gold
-        text.innerText = "You now have a "+newWeapon+"."
-
-        inventory.push(newWeapon)
-       
+    if(currentWeapon<weapons.length){
+          
+          if(gold>=30){
+              gold-=30
+              goldText.innerText = gold
+              currentWeapon++
+      
+              let newWeapon = weapons[currentWeapon].name
+      
+              goldText.innerText= gold
+              text.innerText = "You now have a "+newWeapon+"."
+      
+              inventory.push(newWeapon)
+      
+              text.innerText+=" In your inventory you have: "+inventory
+             
+      
+            }
+            else{
+              text.innerText = "You do not have enough gold to buy weapon."
+      
+            }
 
       }
-    //   else{
-    //     text.innerText = "You do not have enough gold to buy weapon."
-
-    //   }
 
    
 
