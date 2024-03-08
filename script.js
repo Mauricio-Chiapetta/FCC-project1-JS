@@ -81,7 +81,7 @@ const locations = [
     text: "You enter the cave. You see some monsters.",
   },
   {
-      name:"figth",
+      name:"fight",
       "button text":["Attack","Dodge","Run"],
       "button functions":[attack,dodge,goTown],
       text:"You are fighting a monster."
@@ -177,18 +177,18 @@ function goFight(){
 }
 
 function fightSlime() {
-    fighting = 0 - monsters[0]
+    fighting = 0 
     goFight()
 }
 
 function fightBeast() {
-    fighting = 1 - monsters[1]
+    fighting = 1 
     goFight()
 
 }
 
 function fightDragon() {
-   fighting = 2 - monsters[2]
+   fighting = 2 
    goFight()
 }
 // parei aqui
