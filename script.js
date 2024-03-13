@@ -236,6 +236,11 @@ function attack() {
       defeatMonster()
     }
   }
+
+  if(Math.random() <= .1){
+    text.innerText += " Your "+inventory.pop()+" breaks."
+    currentWeapon --;
+  }
 }
 // não entendi
 function getMonsterAttackValue(level){
@@ -281,5 +286,6 @@ function restart(){
 }
 
 function isMonsterHit(){
-  return Math.random () > .2
+  return Math.random () > .2 || health < 20;
+
 }
