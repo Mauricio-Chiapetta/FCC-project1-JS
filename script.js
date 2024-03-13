@@ -19,6 +19,10 @@ const text = document.querySelector("#text");
 
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+//alterar o backgroung para ter mais interação
+const body = document.querySelector('body')
+
+
 const weapons = [
   {
     name: "stick",
@@ -131,17 +135,21 @@ function update(location) {
   button3.onclick = location["button functions"][2];
 
   text.innerHTML = location.text;
+  
 }
 
 function goTown() {
   update(locations[0]);
+  body.className = 'town-background'
 }
 
 function goStore() {
   update(locations[1]);
+  body.className = 'store-background'
 }
 function goCave() {
   update(locations[2]);
+  body.className = 'cave-background'
 }
 
 function buyHealth() {
@@ -214,8 +222,10 @@ function fightBeast() {
 function fightDragon() {
   fighting = 2;
   goFight();
+  body.className = 'dragon-background'
 }
-// parei aqui
+
+
 function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText +=
@@ -264,6 +274,7 @@ function defeatMonster() {
   gold += Math.floor(monsters[fighting].level * 6.7);
   xp += monsters[fighting].level;
 
+  
   goldText.innerText = gold;
   xpText.innerText = xp;
 
